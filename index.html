@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV Dina Ascanio</title>
+<title>Hoja de Vida - Dina Ascanio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,77 +18,92 @@
 
 body{
     background:#f8f5ff;
-    padding:40px;
+    padding:30px;
 }
 
+/* CONTENEDOR */
+
 .cv{
-    max-width:950px;
+    max-width:800px;
     margin:auto;
     background:white;
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 18px 50px rgba(168,85,247,0.12);
+    border-radius:18px;
+    box-shadow:0 15px 40px rgba(168,85,247,0.12);
+    padding:40px;
 }
 
 /* HEADER */
 
 .header{
-    background:linear-gradient(90deg,#ede9fe,#f5f3ff);
-    padding:40px;
-    display:flex;
-    align-items:center;
-    gap:20px;
-    border-bottom:1px solid #ede9fe;
+    text-align:center;
+    border-bottom:2px solid #ede9fe;
+    padding-bottom:25px;
+    margin-bottom:25px;
 }
 
 .header img{
-    width:120px;
-    height:120px;
+    width:130px;
+    height:130px;
     border-radius:50%;
     object-fit:cover;
     border:3px solid #c084fc;
+    margin-bottom:10px;
 }
 
-.header-info h1{
+.header h1{
     font-size:26px;
     color:#5b21b6;
 }
 
-.header-info p{
+.header p{
     color:#6b7280;
     font-size:14px;
 }
 
-/* BODY */
+/* SECCIONES */
 
-.body{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-}
-
-/* LEFT */
-
-.left{
-    background:#faf7ff;
-    padding:30px;
-    border-right:1px solid #ede9fe;
-}
-
-.box{
+.section{
     margin-bottom:25px;
 }
 
-.box h2{
-    font-size:12px;
-    letter-spacing:1px;
-    color:#a855f7;
+.section h2{
+    font-size:16px;
+    color:#5b21b6;
     margin-bottom:10px;
+    border-left:4px solid #c084fc;
+    padding-left:10px;
 }
 
-.box p{
+.section p{
+    font-size:14px;
+    color:#4b5563;
+    line-height:1.7;
+}
+
+/* TARJETAS */
+
+.card{
+    background:#faf7ff;
+    border-left:4px solid #c084fc;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    font-size:15px;
+    color:#111827;
+}
+
+.card span{
+    font-size:12px;
+    color:#6b7280;
+}
+
+.card p{
     font-size:13px;
-    color:#374151;
-    line-height:1.6;
+    color:#4b5563;
+    margin-top:6px;
 }
 
 /* TAGS */
@@ -97,6 +112,7 @@ body{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
+    margin-top:8px;
 }
 
 .tag{
@@ -112,79 +128,20 @@ body{
 .social a{
     display:block;
     font-size:13px;
-    color:#374151;
+    color:#4b5563;
     text-decoration:none;
-    margin-bottom:6px;
+    margin-top:5px;
 }
 
 .social a:hover{
     color:#a855f7;
 }
 
-/* RIGHT */
-
-.right{
-    padding:35px;
-}
-
-.section{
-    margin-bottom:28px;
-}
-
-.section h2{
-    font-size:17px;
-    color:#5b21b6;
-    margin-bottom:12px;
-    position:relative;
-}
-
-.section h2::after{
-    content:"";
-    width:45px;
-    height:3px;
-    background:#c084fc;
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    border-radius:10px;
-}
-
-.card{
-    background:#ffffff;
-    border:1px solid #ede9fe;
-    border-left:4px solid #c084fc;
-    padding:15px;
-    border-radius:12px;
-    margin-bottom:12px;
-}
-
-.card h3{
-    font-size:15px;
-    color:#5b21b6;
-}
-
-.card span{
-    font-size:12px;
-    color:#6b7280;
-}
-
-.card p{
-    font-size:13px;
-    color:#4b5563;
-    margin-top:6px;
-    line-height:1.6;
-}
-
 /* RESPONSIVE */
 
-@media(max-width:800px){
-    .body{
-        grid-template-columns:1fr;
-    }
-
-    .header{
-        flex-direction:column;
-        text-align:center;
+@media(max-width:600px){
+    .cv{
+        padding:25px;
     }
 }
 
@@ -198,82 +155,67 @@ body{
     <!-- HEADER -->
     <div class="header">
 
-        <!-- 📸 FOTO (CAMBIA AQUÍ TU FOTO) -->
-        <img src="foto.jpg" alt="Foto de Dina Ascanio">
+        <!-- FOTO -->
+        <img src="/c/Users/SCIS-PC18/Desktop/foto.jpg/foto.jpg.jfif" alt="Dina Ascanio">
 
-        <div class="header-info">
-            <h1>Dina Ascanio</h1>
-            <p>Estudiante de Ingeniería en Sistemas</p>
-            <p>Ocaña, Norte de Santander</p>
+        <h1>Dina Ascanio</h1>
+        <p>Estudiante de Ingeniería en Sistemas</p>
+        <p>Ocaña, Norte de Santander</p>
+
+    </div>
+
+    <!-- PERFIL -->
+    <div class="section">
+        <h2>Perfil Profesional</h2>
+        <p>
+            Estudiante de Ingeniería en Sistemas en la Universidad Francisco de Paula Santander.
+            Me caracterizo por ser responsable, disciplinada, con gusto por la lectura y aprendizaje continuo.
+        </p>
+    </div>x
+
+    <!-- CONTACTO -->
+    <div class="section">
+        <h2>Contacto</h2>
+        <p>📱 3001844277</p>
+    </div>
+
+    <!-- EDUCACIÓN -->
+    <div class="section">
+        <h2>Educación</h2>
+
+        <div class="card">
+            <h3>Ingeniería en Sistemas</h3>
+            <span>Universidad Francisco de Paula Santander</span>
+            <p>Actualmente en formación académica.</p>
         </div>
 
     </div>
 
-    <!-- BODY -->
-    <div class="body">
+    <!-- HABILIDADES -->
+    <div class="section">
+        <h2>Habilidades</h2>
 
-        <!-- LEFT -->
-        <aside class="left">
+        <div class="tags">
+            <span class="tag">Responsabilidad</span>
+            <span class="tag">Trabajo en equipo</span>
+            <span class="tag">Organización</span>
+            <span class="tag">Aprendizaje rápido</span>
+        </div>
 
-            <div class="box">
-                <h2>CONTACTO</h2>
-                <p>📱 3001844277</p>
-            </div>
+    </div>
 
-            <div class="box">
-                <h2>HABILIDADES</h2>
-                <div class="tags">
-                    <span class="tag">Responsabilidad</span>
-                    <span class="tag">Trabajo en equipo</span>
-                    <span class="tag">Organización</span>
-                    <span class="tag">Aprendizaje rápido</span>
-                </div>
-            </div>
+    <!-- INTERESES -->
+    <div class="section">
+        <h2>Intereses</h2>
+        <p>📚 Lectura de libros de desarrollo personal y tecnología.</p>
+    </div>
 
-            <div class="box social">
-                <h2>REDES SOCIALES</h2>
+    <!-- REDES -->
+    <div class="section social">
+        <h2>Redes Sociales</h2>
 
-                <!-- 🔗 PON AQUÍ TUS LINKS REALES -->
-                <a href="https://www.instagram.com/dinaascanio_16?igsh=dGx4OTg1MzF2eWxz" target="_blank">Instagram</a>
-                <a href="https://www.linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-                <a href="https://facebook.com/tuusuario" target="_blank">Facebook</a>
-
-            </div>
-
-        </aside>
-
-        <!-- RIGHT -->
-        <main class="right">
-
-            <section class="section">
-                <h2>Perfil Profesional</h2>
-                <p>
-                    Estudiante de Ingeniería en Sistemas en la Universidad Francisco de Paula Santander,
-                    interesada en desarrollo de software, tecnología y aprendizaje continuo.
-                </p>
-            </section>
-
-            <section class="section">
-                <h2>Educación</h2>
-
-                <div class="card">
-                    <h3>Ingeniería en Sistemas</h3>
-                    <span>Universidad Francisco de Paula Santander</span>
-                    <p>Actualmente en formación académica.</p>
-                </div>
-
-            </section>
-
-            <section class="section">
-                <h2>Intereses</h2>
-
-                <div class="card">
-                    <p>📚 Lectura de libros de desarrollo personal y tecnología.</p>
-                </div>
-
-            </section>
-
-        </main>
+        <a href="https://www.instagram.com/dinaascanio_16?igsh=dGx4OTg1MzF2eWxz" target="_blank">Instagram</a>
+        <a href="https://facebook.com/tuusuario" target="_blank">Facebook</a>
 
     </div>
 
@@ -281,3 +223,5 @@ body{
 
 </body>
 </html>
+
+
